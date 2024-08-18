@@ -17,6 +17,11 @@ Welcome to the **Journal App**! This is a backend-only project built with Java S
 - **JWT**: For secure authentication.
 - **Lombok**: Reduces boilerplate code.
 
+## 📸 Screenshots
+
+- ![Screenshot 1082](https://github.com/Rishabh022/Journal_Spring_Boot/blob/main/Screenshot%20(1082).png)
+- ![Screenshot 1081](https://github.com/Rishabh022/Journal_Spring_Boot/blob/main/Screenshot%20(1081).png)
+
 ## 📂 Project Structure
 
 - **`src/main/java/com/rishabh/journalApp/`**: Main project package.
