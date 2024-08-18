@@ -6,8 +6,9 @@ Welcome to the **Journal App**! This is a backend-only project built with Java S
 
 - **User Management**: Create and manage user accounts.
 - **Journal Entries**: Add, update, and view personal journal entries.
-- **Sentiment Analysis**: Track the sentiment of journal entries.
+- **Mail Services**: Integrated email notifications.
 - **Security**: Secure endpoints with JWT authentication.
+- **Log Book**: Track user activity with a log book feature.
 
 ## 🛠️ Technologies Used
 
@@ -18,6 +19,35 @@ Welcome to the **Journal App**! This is a backend-only project built with Java S
 
 ## 📂 Project Structure
 
-- **`src/main/java/com/rishabh/journalApp/entity/`**: Contains entity classes:
-  - **`User`**: Represents a user with fields for `id`, `userName`, `email`, `sentimentAnalysis`, `password`, `journalEntries`, and `roles`.
-  - **`JournalEntry`**: Represents a journal entry with fields for `id`, `title`, `content`, `data`, and `sentiment`.
+- **`src/main/java/com/rishabh/journalApp/`**: Main project package.
+  - **`JournalApplication.java`**: Entry point of the application.
+  - **`config/`**: Contains configuration files.
+    - **`SpringSecurity.java`**: Configures security settings.
+  - **`controller/`**: Contains REST controllers.
+    - **`AdminController.java`**: Manages admin operations.
+    - **`JournalEntryController.java`**: Manages journal entries.
+    - **`PublicController.java`**: Handles public API endpoints.
+    - **`UserController.java`**: Manages user-related operations.
+  - **`entity/`**: Contains entity classes.
+    - **`User.java`**: Represents a user.
+    - **`JournalEntry.java`**: Represents a journal entry.
+  - **`enums/`**: Contains enums.
+    - **`Sentiment.java`**: Enum for sentiment types.
+  - **`filter/`**: Contains filter classes.
+    - **`JwtFilter.java`**: Filters requests based on JWT.
+  - **`model/`**: Contains model classes.
+    - **`SentimentData.java`**: Holds sentiment analysis data.
+  - **`repository/`**: Contains repository interfaces.
+    - **`JournalEntryRepository.java`**: Handles journal entry persistence.
+    - **`UserRepository.java`**: Manages user data.
+    - **`UserRepositoryImpl.java`**: Custom implementation for user repository.
+  - **`scheduler/`**: Contains scheduled tasks.
+    - **`UserScheduler.java`**: Handles user-related scheduled tasks.
+  - **`service/`**: Contains service classes.
+    - **`EmailService.java`**: Manages email notifications.
+    - **`JournalEntryService.java`**: Manages journal entry operations.
+    - **`UserDetailsServiceImpl.java`**: Loads user details for authentication.
+    - **`UserService.java`**: Manages user-related business logic.
+  - **`utilis/`**: Contains utility classes.
+    - **`JwtUtil.java`**: Utility class for JWT operations.
+
